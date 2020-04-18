@@ -1,0 +1,89 @@
+<DOCTYPE! html>
+<html>
+
+<head>
+
+
+</head>
+
+<body>
+
+	<p>Today you will learn about how to write functions in JavaScript.  It will be very similar to what 
+		we learned in Python.  In today's lesson I will write the JavaScript code inline of the body
+		tags, which I wouldn't normally do.  We have seen a few functions written with the examples
+		we've already seen.  As always a function must be created then called.</p> 
+		
+		<h1>Syntax</h1>  
+		The syntax for creating a function is the same as Arduino code and which is <br>
+		<br>
+		function FunctionName() {  <br>
+		Instruction  	<br>
+		Instruction   	<br>
+		Instruction		<br>
+		}  				<br>
+		<br>
+		<br>
+		In order to call a function you would use FunctionName() in the script tags or have a button call it.
+		<br>
+		<!-- -------------------------------------------------------------------------------- -->
+		<div id="Example1">
+			<h1>Example #1</h1>
+			For example the following code is used to calculate the area of a 4x5 rectangle.	<br>
+			function AreaRectangle() {  <br>
+			var AreaRect=4*5;  <br>
+			document.getElementById("Rectangle").innerHTML=('The area of the rectangle is ' + AreaRect ); <br>
+			}  <br>
+			<br>
+			When AreaRectangle(); is called the following will appear (see below).  <br>
+			<span id="Rectangle"></span>
+			
+			<script>
+				function AreaRectangle() {
+				var AreaRect=4*5;
+				document.getElementById("Rectangle").innerHTML=('The area of the rectangle is ' + AreaRect );
+					}
+					
+				AreaRectangle();	
+			</script>	
+		</div>
+		
+		<!-- -------------------------------------------------------------------------------- -->
+		<div id="Example2">
+			<h1>Example #2</h1>
+			<p>Often, when a function is written variable will be "passed through" it.  The syntax
+			will include the variables in the brackets. <b>NOTE:  IT IS VERY IMPORTANT THAT THE 
+			VARIABLES USED IN CREATING THE FUNCTION NOT HAVE THE SAME NAME AS OTHERS TRHOUGHOUT
+			THE WEBPAGE!!</b>
+			</p>
+			<br>
+			var x=10; <br>
+			var y=15;  <br>
+
+			
+			function AreaTriangle(base,height) {<br>
+				var AreaTri=0.5*base*height;  <br>
+				document.getElementById("Triangle").innerHTML='The area of the triangle is '+ AreaTri; <br>
+				}  <br>
+			<br>
+			
+			<button onclick="AreaTriangle(x,y)">Click here to call the function.</button>
+			<span id="Triangle">The answer will appear here!</span>
+			<script>
+				var x=10;
+				var y=15;
+				
+				function AreaTriangle(base,height) {
+					var AreaTri=0.5*base*height;
+					document.getElementById("Triangle").innerHTML=('The area of the triangle is '+ AreaTri);
+					}
+					
+				//AreaTriangle(x,y); //Calls the function if button wasn't in place. NOTE: I didn't use base or height in this line!
+			</script>	
+			
+		</div>
+		<br>
+		<br>
+		<br>
+</body>
+
+</html>
